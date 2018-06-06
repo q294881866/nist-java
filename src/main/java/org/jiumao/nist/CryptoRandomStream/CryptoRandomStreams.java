@@ -38,4 +38,5 @@ public enum CryptoRandomStreams {
 	DefaultStream,
 	NumberOfStreams,    // Indication of the number of CryptoRandomStream types, any added CryptoRandomStream type must be inserted before
 	NotDefined,
+	StringOfStream;
 }
