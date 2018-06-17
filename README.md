@@ -9,7 +9,7 @@ nist-sts 算法java版本
 ---
 
 ```
-BlockFrequency:false
+ApproximateEntropy:false
 BlockFrequency:true
 CumulativeSumForward:true
 CumulativeSumReverse:true

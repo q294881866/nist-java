@@ -53,7 +53,7 @@ public class Test {
         
         StringCryptoRandomStream scr = StringCryptoRandomStream.ofBinaryString(binaryStream);
         boolean ApproximateEntropy = new ApproximateEntropy().isRandom(scr);
-        System.out.println("BlockFrequency:"+ApproximateEntropy);
+        System.out.println("ApproximateEntropy:"+ApproximateEntropy);
         boolean BlockFrequency = new BlockFrequency().isRandom(scr);
         System.out.println("BlockFrequency:"+BlockFrequency);
         boolean CumulativeSumForward = new CumulativeSumForward().isRandom(scr);
