@@ -19,7 +19,7 @@ import org.jiumao.nist.CryptoRandomStream.BaseCryptoRandomStream;
  * @author ppf@jiumao.org
  * @date 2018年3月22日
  */
-public class DiscreteFourierTransformTest extends BaseRandom {
+public class DiscreteFourierTransform extends BaseRandom {
 
     /// Random Test Class enumerator name
     protected static final RandomTests TEST = RandomTests.DiscreteFourierTransform;
@@ -179,11 +179,11 @@ public class DiscreteFourierTransformTest extends BaseRandom {
                     t5 = ido << 1;
                     t6 = ido;
                     for (k = 0; k < l1; k++) {
-                        ch[t4 - 1] = (DiscreteFourierTransformTest.HSQT2 * (cc[t1] - cc[t2])) + cc[t6 - 1];
+                        ch[t4 - 1] = (DiscreteFourierTransform.HSQT2 * (cc[t1] - cc[t2])) + cc[t6 - 1];
                         ch[t4 + t5 - 1] =
-                                cc[t6 - 1] - (DiscreteFourierTransformTest.HSQT2 * (cc[t1] - cc[t2]));
-                        ch[t4] = (-DiscreteFourierTransformTest.HSQT2 * (cc[t1] + cc[t2])) - cc[t1 + t0];
-                        ch[t4 + t5] = (-DiscreteFourierTransformTest.HSQT2 * (cc[t1] + cc[t2])) + cc[t1 + t0];
+                                cc[t6 - 1] - (DiscreteFourierTransform.HSQT2 * (cc[t1] - cc[t2]));
+                        ch[t4] = (-DiscreteFourierTransform.HSQT2 * (cc[t1] + cc[t2])) - cc[t1 + t0];
+                        ch[t4 + t5] = (-DiscreteFourierTransform.HSQT2 * (cc[t1] + cc[t2])) + cc[t1 + t0];
                         t1 += ido;
                         t2 += ido;
                         t4 += t3;
@@ -217,7 +217,7 @@ public class DiscreteFourierTransformTest extends BaseRandom {
         double dcp, arg, dsp, ar1h, ar2h;
         int idp2, ipp2;
 
-        arg = DiscreteFourierTransformTest.TPI / (double) ip;
+        arg = DiscreteFourierTransform.TPI / (double) ip;
         dcp = Math.cos(arg);
         dsp = Math.sin(arg);
         ipph = (ip + 1) >> 1;
@@ -513,7 +513,7 @@ public class DiscreteFourierTransformTest extends BaseRandom {
         DoubleBuffer wa;
 
         wa = DoubleBuffer.wrap(waFull, n, waFull.length - n).slice();
-        ntry = DiscreteFourierTransformTest.NTRYH[0];
+        ntry = DiscreteFourierTransform.NTRYH[0];
         j = 0;
         do {
             nq = nl / ntry;
@@ -521,7 +521,7 @@ public class DiscreteFourierTransformTest extends BaseRandom {
             if (nr != 0) {
                 j++;
                 if (j < 4)
-                    ntry = DiscreteFourierTransformTest.NTRYH[j];
+                    ntry = DiscreteFourierTransform.NTRYH[j];
                 else
                     ntry += 2;
             }
@@ -540,7 +540,7 @@ public class DiscreteFourierTransformTest extends BaseRandom {
         } while (nl != 1);
         ifac[0] = n;
         ifac[1] = nf;
-        argh = DiscreteFourierTransformTest.TPI / n;
+        argh = DiscreteFourierTransform.TPI / n;
         is = 0;
         nfm1 = nf - 1;
         l1 = 1;
@@ -649,7 +649,7 @@ public class DiscreteFourierTransformTest extends BaseRandom {
     /**
      * Constructor, default
      */
-    public DiscreteFourierTransformTest() {
+    public DiscreteFourierTransform() {
 
         super();
 
@@ -666,7 +666,7 @@ public class DiscreteFourierTransformTest extends BaseRandom {
      * @param mathFuncObj mathematicalFunctions object that will be used by this
      *            object
      */
-    public DiscreteFourierTransformTest(MathematicalFunctions mathFuncObj) {
+    public DiscreteFourierTransform(MathematicalFunctions mathFuncObj) {
 
         super(mathFuncObj);
 
@@ -819,7 +819,7 @@ public class DiscreteFourierTransformTest extends BaseRandom {
      */
     public RandomTests GetType() {
 
-        return DiscreteFourierTransformTest.TEST;
+        return DiscreteFourierTransform.TEST;
     }
 
 
@@ -831,7 +831,7 @@ public class DiscreteFourierTransformTest extends BaseRandom {
      */
     public int GetMinimumLength() {
 
-        return DiscreteFourierTransformTest.MINIMUMLENGTH;
+        return DiscreteFourierTransform.MINIMUMLENGTH;
     }
 
 

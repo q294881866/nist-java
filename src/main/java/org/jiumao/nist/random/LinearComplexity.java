@@ -6,16 +6,23 @@ import org.jiumao.nist.CryptoRandomStream.BaseCryptoRandomStream;
 
 
 /**
- * The focus of this test is the length of a linear feedback shiftregister
- * (LFSR). The purpose of this test is to determine whether or not the sequence
- * is complex enough to be considered random. Random sequences are characterized
- * by longer LFSRs. An LFSR that is too short implies non- randomness.
+ * 本检验手段主要是看线性反馈移位寄存器的长度。
+ * <p>
+ * 检验的目的是判定序列的复杂程度是否达到可视为是随 机序列的程度。随机序列的特点是有较长的线性反馈移位寄存器。一个线性反馈移位寄存器太小的话意味着序列非随机
  */
 public class LinearComplexity extends BaseRandom {
     /**
      * "blockLength" length in bits of block division
      */
     protected int blockLength;
+
+    
+    
+
+    public LinearComplexity(int blockLength) {
+        super();
+        this.blockLength = blockLength;
+    }
 
 
     @Override
