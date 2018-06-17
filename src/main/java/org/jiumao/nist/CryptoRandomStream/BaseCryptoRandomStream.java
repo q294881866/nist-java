@@ -216,13 +216,6 @@ public abstract class BaseCryptoRandomStream {
    */
     abstract public void SetCryptoRandomStreamUL(int ulLength);
 
-  /**
-   * Set the pointed stream as hexadecimal string
-   * 
-   * @param      hex  hexadecimal string representing a byte stream
-   * @throws     OutOfMemoryError, DataFormatException
-   */
-    abstract public void SetCryptoRandomStreamHexString(String hex) throws OutOfMemoryError, DataFormatException;
 
   /**
    * Gets the buffer to the memory stream

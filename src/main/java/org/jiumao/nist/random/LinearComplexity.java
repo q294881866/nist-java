@@ -20,7 +20,7 @@ public class LinearComplexity extends BaseRandom {
 
     @Override
     public boolean isRandom(BaseCryptoRandomStream stream) {
-        int i, ii, j, d, N, L, m, N_, parity, sign, K = 6;
+        int i, ii, j, d, N, L, m, N_, sign, K = 6;
         double T_, mean, nu[] = new double[7], chi2;
         double pi[] = { 0.01047, 0.03125, 0.12500, 0.50000, 0.25000, 0.06250, 0.020833 };
         int M = blockLength;
@@ -70,12 +70,12 @@ public class LinearComplexity extends BaseRandom {
                 }
                 N_++;
             }
-            if ((parity = (M + 1) % 2) == 0)
+            if (((M + 1) % 2) == 0)
                 sign = -1;
             else
                 sign = 1;
             mean = M / 2.0 + (9.0 + sign) / 36.0 - 1.0 / Math.pow(2, M) * (M / 3.0 + 2.0 / 9.0);
-            if ((parity = M % 2) == 0)
+            if ((M % 2) == 0)
                 sign = 1;
             else
                 sign = -1;

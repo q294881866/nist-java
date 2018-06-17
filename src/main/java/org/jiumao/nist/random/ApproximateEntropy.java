@@ -154,11 +154,6 @@ public class ApproximateEntropy extends BaseRandom {
         		numOfBlocks = bitStream.GetBitLength();
         		powLen = (int)Math.pow(2, blockSize+1)-1;
         		P = new int[powLen];
-        		if ( P == null ){
-        			this.error = RandomTestErrors.InsufficientMemory;
-        			this.random = false;
-        			return this.random;
-        		}
         		for(i = 1; i < powLen-1; i++) P[i] = 0;
         		for(i = 0; i < numOfBlocks; i++) { 
         			k = 1;
